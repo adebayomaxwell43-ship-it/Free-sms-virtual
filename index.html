@@ -1,61 +1,224 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FreeSMS - Free SMS with Temporary Phone Number</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#1a1a2e;padding:0 20px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #eee}
-.logo{display:flex;align-items:center;gap:8px;font-weight:bold;font-size:22px}
-.logo span{background:#4A5BE4;color:#fff;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.lang{font-size:16px}
-.menu{font-size:26px}
-.excellent{display:flex;justify-content:center;align-items:center;gap:8px;margin:18px 0;font-weight:bold}
-.stars{display:flex;gap:2px}
-.stars span{background:#00b67a;color:#fff;padding:5px;font-size:14px}
-h1{font-size:38px;text-align:center;line-height:1.15;margin:10px 0 20px;font-weight:900}
-ul{list-style:none;padding:0;font-size:18px;color:#333}
-ul li{margin-bottom:12px;padding-left:8px}
-.btn1{display:block;background:#4A5BE4;color:#fff;text-align:center;padding:18px;font-size:19px;font-weight:bold;text-decoration:none;border-radius:12px;margin-top:25px}
-.btn2{display:block;background:#fff;color:#4A5BE4;text-align:center;padding:16px;font-size:18px;font-weight:bold;text-decoration:none;border-radius:12px;margin-top:12px;border:2px solid #4A5BE4}
-.info{font-size:16px;line-height:1.6;color:#555;text-align:center;margin-top:25px}
-.chat{position:fixed;bottom:20px;right:20px;background:#4A5BE4;color:#fff;width:60px;height:60px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none}
-.features{margin-top:30px;font-size:18px}
-.features p{margin:10px 0}
-.check{color:#4A5BE4;font-weight:bold}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #1a1a2e;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.logo span {
+  background: #4A5BE4;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.lang { font-size: 16px; }
+.menu { font-size: 26px; }
+
+.excellent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0;
+  font-weight: bold;
+}
+
+.stars { display: flex; gap: 2px; }
+
+.stars span {
+  background: #00b67a;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 38px;
+  text-align: center;
+  line-height: 1.15;
+  margin: 10px 0 20px;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.btn1, .btn2 {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.btn1 {
+  background: #4A5BE4;
+  color: #fff;
+  padding: 18px;
+  font-size: 19px;
+  margin-top: 25px;
+}
+
+.btn2 {
+  background: #fff;
+  color: #4A5BE4;
+  padding: 16px;
+  border: 2px solid #4A5BE4;
+}
+
+.info {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4A5BE4;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.features {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.features p { margin: 10px 0; }
+.check { color: #4A5BE4; font-weight: bold; }
 </style>
 </head>
+
 <body>
 
 <div class="header">
-<div class="logo"><span>✓</span> FreeSMS</div>
-<div><span class="lang">🇺🇸 EN ⌄</span> <span class="menu">☰</span></div>
+  <div class="logo"><span>✓</span> FreeSMS</div>
+  <div>
+    <span class="lang">🇺🇸 EN ⌄</span>
+    <span class="menu">☰</span>
+  </div>
 </div>
 
 <div class="excellent">
-Excellent <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  Excellent
+  <div class="stars">
+    <span>★</span><span>★</span><span>★</span>
+    <span>★</span><span>★</span>
+  </div>
 </div>
 
-<h1>Free SMS with a<br>Temporary Phone<br>Number</h1>
+<h1>Free SMS with a<br>
+Temporary Phone<br>
+Number</h1>
 
 <ul>
-<li>• &nbsp; 90 countries and more than 1 million numbers</li>
-<li>• &nbsp; Adding phone numbers daily</li>
+  <li>• &nbsp; 90 countries and more than 1 million numbers</li>
+  <li>• &nbsp; Adding phone numbers daily</li>
 </ul>
 
-<a class="btn1" href=[https://wa.me/?](https://wa.me/?+234)[+234](https://wa.me/?+234)[8126420683](https://wa.me/?text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F)[text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F](https://wa.me/?text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F)
->Get temporary number</a>
-<a class="btn2" href=[https://wa.me/?](https://wa.me/?+234)[+234](https://wa.me/?+234)[8126420683](https://wa.me/?text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F)[text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F](https://wa.me/?text=MANOOO%20VC%20N%20VAI%20ACREDITAR%20🔥🔥💥💥%0A%0AConfira%20este%20link%3A%20https%3A%2F%2Fbr.cointelegraph.com%2Fjogos%2Fjogos-azar%2F)
-FreeSMS">Learn more about FreeSMS</a>
+<a class="btn1 whatsapp-link" href="#">
+  Get temporary number
+</a>
 
-<p class="info">New here? Access to FreeSMS is currently invite-based to keep numbers available and abuse-free for everyone. Tap <b>"Get temporary number"</b> to request access — it only takes a minute.</p>
+<a class="btn2 whatsapp-link" href="#">
+  Learn more about FreeSMS
+</a>
+
+<p class="info">
+  New here? Access to FreeSMS is currently invite-based.
+  Tap "Get temporary number" to request access.
+</p>
 
 <div class="features">
-<p><span class="check">✓</span> Ultra-fast speeds</p>
-<p><span class="check">✓</span> Valid for 20 minutes</p>
+  <p><span class="check">✓</span> Ultra-fast speeds</p>
+  <p><span class="check">✓</span> Valid for 20 minutes</p>
 </div>
 
-<a class="chat" href="https://wa.me/2348126420683?text=Hi%2C%20I%20need%20an%20access%20code">💬</a>
+<a class="chat whatsapp-link" href="#" aria-label="Request access code">💬</a>
+
+<script>
+const phoneNumber = "2348126420683";
+
+const message = `Unete a MI Grupo se vale todo!! Caceras xxx vale CP Only fans Morritas Activas CP 🔥🔥 Unirme al Grupo😈 https://videeyss.online/morritas-cp
+
+MANOOO VC N VAI ACREDITAR 🔥🔥💥💥
+
+o site da LUCIEN WHATSAPP tá PAGANDO ABSURDO kkkkk 🎰💰
+eu entrei agr e ja caiu 150 GIROS GRÁTIS na minha conta 🤯💵
+GANHEI quase 1 MIL real em menos de 20min 😱😱
+
+👉👉 https://br.cointelegraph.com/jogos/jogos-azar/ 👈👈
+(é só clicar, criar conta e ja era 😎)
+
+⚡ manda isso pra TODO mundo q vc tem no zap, pq eles dao BONUS EXTRA pra qm espalha 🔥
+⚠️ mesmo se seu zap travar ou bloquear, a gente ativa de novo rapidin 🤫💣
+CORRE PQ ISSO VAI SUMIR LOGO 🚀🚀`;
+
+const whatsappURL =
+  "https://wa.me/" + phoneNumber +
+  "?text=" + encodeURIComponent(message);
+
+document.querySelectorAll(".whatsapp-link").forEach(link => {
+  link.href = whatsappURL;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+});
+</script>
 
 </body>
 </html>
+```
